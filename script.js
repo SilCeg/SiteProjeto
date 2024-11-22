@@ -32,25 +32,12 @@ if (currentPage.includes("index.html")) {
     }
   };
 
-  // Função para deletar aluno
-  const deletarAluno = async (id) => {
-    if (confirm("Tem certeza que deseja deletar este aluno?")) {
-      try {
-        await axios.get(`${apiBaseUrl}/deletar/${id}`);
-        alert("Aluno deletado com sucesso!");
-        carregarAlunos();
-      } catch (error) {
-        console.error("Erro ao deletar aluno:", error);
-      }
-    }
-  };
-
   // Carrega alunos ao abrir a página
   carregarAlunos();
 }
 
 // Lógica para a página editar.html
-if (currentPage.includes("editar.html")) {
+if (currentPage.includes("edit.html")) {
   // Função para carregar os dados do aluno para edição
   const carregarAluno = async (id) => {
     try {
